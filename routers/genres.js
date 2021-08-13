@@ -1,6 +1,7 @@
 const validate = require("../middlewares/validate");
-const express = require("express");
 const { valiadateGenre, Genre } = require("../models/genre");
+const mongoose = require("mongoose");
+const express = require("express");
 const router = express.Router();
 
 router.post("/", validate(valiadateGenre), async (req, res) => {
@@ -12,15 +13,16 @@ router.post("/", validate(valiadateGenre), async (req, res) => {
   res.send(genre);
 });
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  const genres = await Genre.find();
   res.send(genres);
 });
 
-router.get("/:id", (req, res) => {
-  const genre = genres.find((g) => g.id === parseInt(req.params.id));
-  if (!genre)
-    return res.status(404).send("The genre with given id cannot be found");
+router.get("/:id", async (req, res) => {
+  if (!mongoose.Types.ObjectId.isValid(req.params.id))
+    return res.status(400).send("Invalid Id");
 
+  const genre = await Genre.findById(req.params.id);
   res.send(genre);
 });
 
