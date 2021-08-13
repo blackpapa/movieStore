@@ -1,38 +1,15 @@
-const Joi = require("joi");
 const validate = require("../middlewares/validate");
 const express = require("express");
+const { valiadateGenre, Genre } = require("../models/genre");
 const router = express.Router();
 
-const valiadateGenre = (genre) => {
-  const schema = Joi.object({
-    name: Joi.string().min(2).max(255).required(),
+router.post("/", validate(valiadateGenre), async (req, res) => {
+  const genre = new Genre({
+    name: req.body.name,
   });
 
-  return schema.validate(genre);
-};
-
-const genres = [
-  {
-    id: 1,
-    name: "History",
-  },
-  {
-    id: 2,
-    name: "Action",
-  },
-  {
-    id: 3,
-    name: "Thriller",
-  },
-];
-
-router.post("/", validate(valiadateGenre), (req, res) => {
-  const genre = {
-    name: req.body.name,
-  };
-
-  genres.push(genre);
-  res.send(genres);
+  await genre.save();
+  res.send(genre);
 });
 
 router.get("/", (req, res) => {
