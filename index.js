@@ -7,6 +7,7 @@ mongoose
   .connect("mongodb://localhost/store", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
   })
   .then(() => console.log("Connected with database..."))
   .catch((err) => console.log(err, "Fail to connect with database..."));
