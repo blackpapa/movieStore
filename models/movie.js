@@ -9,11 +9,14 @@ const movieSchema = new mongoose.Schema({
     maxLength: 255,
     required: true,
   },
-  genre: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Genre",
-    required: true,
-  },
+  genre: new mongoose.Schema({
+    name: {
+      type: String,
+      minLength: 2,
+      maxLength: 255,
+      required: true,
+    },
+  }),
   numberInStock: {
     type: Number,
     min: 0,
