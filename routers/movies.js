@@ -1,4 +1,5 @@
 const validate = require("../middlewares/validate");
+const validateObjectId = require("../middlewares/validateObjectId");
 const { validateMovie, Movie } = require("../models/movie");
 const { Genre } = require("../models/genre");
 const _ = require("lodash");
@@ -15,6 +16,19 @@ router.post("/", validate(validateMovie), async (req, res) => {
   });
 
   await movie.save();
+  res.send(movie);
+});
+
+router.get("/", async (req, res) => {
+  const movies = await Movie.find();
+  if (!movies) return res.status(404).send("No movie in the database");
+  res.send(movies);
+});
+
+router.get("/:id", validateObjectId, async (req, res) => {
+  const movie = await Movie.findById(req.params.id);
+  if (!movie)
+    return res.status(404).send("The movie with given id can not be found");
   res.send(movie);
 });
 
