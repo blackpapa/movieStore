@@ -1,10 +1,11 @@
 const genres = require("./routers/genres");
 const mongoose = require("mongoose");
+const config = require("config");
 const express = require("express");
 const app = express();
 
 mongoose
-  .connect("mongodb://localhost/store", {
+  .connect(config.get("db"), {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
