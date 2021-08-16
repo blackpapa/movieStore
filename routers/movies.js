@@ -4,6 +4,7 @@ const { validateMovie, Movie } = require("../models/movie");
 const { Genre } = require("../models/genre");
 const _ = require("lodash");
 const express = require("express");
+require("express-async-errors");
 const router = express.Router();
 
 router.post("/", validate(validateMovie), async (req, res) => {
@@ -27,6 +28,7 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", validateObjectId, async (req, res) => {
   const movie = await Movie.findById(req.params.id);
+
   if (!movie)
     return res.status(404).send("The movie with given id can not be found");
   res.send(movie);

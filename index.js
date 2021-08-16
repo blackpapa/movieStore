@@ -4,7 +4,6 @@ const error = require("./middlewares/error");
 const mongoose = require("mongoose");
 const config = require("config");
 const express = require("express");
-require("express-async-errors");
 const app = express();
 
 mongoose
