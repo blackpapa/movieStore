@@ -25,7 +25,15 @@ router.post("/", validate(validateRental), async (req, res) => {
     movie: _.pick(movie, ["title", "dailyRentalRate"]),
   });
 
-  await rental.save();
+  try {
+    await new Fawn.Task()
+      .save("rentals", rental)
+      .update("movies", { _id: movie._id }, { $inc: { numberInStock: -1 } })
+      .run();
+  } catch (error) {
+    console.log("Something failed and rolled back");
+  }
+
   res.send(rental);
 });
 
