@@ -3,6 +3,7 @@ const validateObjectId = require("../middlewares/validateObjectId");
 const { validateCustomer, Customer } = require("../models/customer");
 const express = require("express");
 const router = express.Router();
+require("express-async-errors");
 
 router.post("/", validate(validateCustomer), async (req, res) => {
   const customer = new Customer({
