@@ -31,7 +31,7 @@ router.post("/", validate(validateRental), async (req, res) => {
       .update("movies", { _id: movie._id }, { $inc: { numberInStock: -1 } })
       .run();
   } catch (error) {
-    console.log("Something failed and rolled back");
+    console.log(error);
   }
 
   res.send(rental);
