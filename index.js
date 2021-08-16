@@ -1,6 +1,8 @@
 const genres = require("./routers/genres");
 const movies = require("./routers/movies");
 const error = require("./middlewares/error");
+const Joi = require("joi");
+Joi.objectId = require("joi-objectid")(Joi);
 const mongoose = require("mongoose");
 const config = require("config");
 const express = require("express");
