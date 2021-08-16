@@ -4,8 +4,12 @@ const { Rental, validateRental } = require("../models/rental");
 const validateObjectId = require("../middlewares/validateObjectId");
 const validate = require("../middlewares/validate");
 const _ = require("lodash");
+const Fawn = require("fawn");
+const mongoose = require("mongoose");
 const express = require("express");
 const router = express.Router();
+
+Fawn.init(mongoose);
 
 router.post("/", validate(validateRental), async (req, res) => {
   const customer = await Customer.findById(req.body.customerId);
@@ -13,6 +17,8 @@ router.post("/", validate(validateRental), async (req, res) => {
 
   const movie = await Movie.findById(req.body.movieId);
   if (!movie) return res.status(400).send("Invalid movie id");
+  if (movie.numberInStock === 0)
+    return res.status(404).send("The movie is out of stock");
 
   const rental = new Rental({
     customer: _.pick(customer, ["name", "phone", "isGold"]),
