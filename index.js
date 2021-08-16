@@ -1,8 +1,10 @@
 const genres = require("./routers/genres");
 const movies = require("./routers/movies");
+const error = require("./middlewares/error");
 const mongoose = require("mongoose");
 const config = require("config");
 const express = require("express");
+require("express-async-errors");
 const app = express();
 
 mongoose
@@ -18,6 +20,7 @@ app.use(express.json());
 
 app.use("/api/genres", genres);
 app.use("/api/movies", movies);
+app.use(error);
 
 const port = process.env.PORT || 3000;
 app.listen(port, console.log(`Listening on port ${port}...`));
