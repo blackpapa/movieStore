@@ -24,7 +24,7 @@ router.post("/", validate(validateRental), async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  const rentals = await Rental.find();
+  const rentals = await Rental.find().sort("-dateOut");
   if (!rentals) return res.status(404).send("No rental in the database");
 
   res.send(rentals);
