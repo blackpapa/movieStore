@@ -25,9 +25,30 @@ router.get("/", async (req, res) => {
 router.get("/:id", validateObjectId, async (req, res) => {
   const customer = await Customer.findById(req.params.id);
   if (!customer)
-    return res.status(400).send("The customer with given Id cannot be found");
+    return res.status(400).send("The customer with given id cannot be found");
 
   res.send(customer);
 });
+
+router.put(
+  "/:id",
+  validateObjectId,
+  validate(validateCustomer),
+  async (req, res) => {
+    const customer = await Customer.findByIdAndUpdate(
+      req.params.id,
+      {
+        name: req.body.name,
+        phone: req.body.phone,
+        isGold: req.body.isGold,
+      },
+      { new: true }
+    );
+
+    if (!customer)
+      return res.status(400).send("The customer with given id cannot be found");
+    res.send(customer);
+  }
+);
 
 module.exports = router;
