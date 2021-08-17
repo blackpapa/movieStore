@@ -9,8 +9,28 @@ const Joi = require("joi");
 Joi.objectId = require("joi-objectid")(Joi);
 const mongoose = require("mongoose");
 const config = require("config");
+const winston = require("winston");
 const express = require("express");
 const app = express();
+
+const logger = winston.createLogger({
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.prettyPrint()
+  ),
+  transports: [
+    new winston.transports.File({ filename: "combined.log" }),
+    new winston.transports.Console({ format: winston.format.simple() }),
+  ],
+  exceptionHandlers: [
+    new winston.transports.File({ filename: "uncaughtexception.log" }),
+    new winston.transports.Console(),
+  ],
+});
+
+process.on("unhandledRejection", (err) => {
+  throw err;
+});
 
 mongoose
   .connect(config.get("db"), {
@@ -18,8 +38,8 @@ mongoose
     useUnifiedTopology: true,
     useFindAndModify: false,
   })
-  .then(() => console.log("Connected with database..."))
-  .catch((err) => console.log(err, "Fail to connect with database..."));
+  .then(() => logger.info("Connected with database..."))
+  .catch((err) => logger.info(err, "Fail to connect with database..."));
 
 app.use(express.json());
 
@@ -32,4 +52,4 @@ app.use("/api/auth", auth);
 app.use(error);
 
 const port = process.env.PORT || 3000;
-app.listen(port, console.log(`Listening on port ${port}...`));
+app.listen(port, logger.info(`Listening on port ${port}...`));
