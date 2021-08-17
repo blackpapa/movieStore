@@ -9,28 +9,10 @@ const Joi = require("joi");
 Joi.objectId = require("joi-objectid")(Joi);
 const mongoose = require("mongoose");
 const config = require("config");
-const winston = require("winston");
 const express = require("express");
 const app = express();
 
-const logger = winston.createLogger({
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.prettyPrint()
-  ),
-  transports: [
-    new winston.transports.File({ filename: "combined.log" }),
-    new winston.transports.Console({ format: winston.format.simple() }),
-  ],
-  exceptionHandlers: [
-    new winston.transports.File({ filename: "uncaughtexception.log" }),
-    new winston.transports.Console(),
-  ],
-});
-
-process.on("unhandledRejection", (err) => {
-  throw err;
-});
+const logger = require("./startup/logging")();
 
 mongoose
   .connect(config.get("db"), {
