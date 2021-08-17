@@ -3,6 +3,7 @@ const { Movie } = require("../models/movie");
 const { Rental, validateRental } = require("../models/rental");
 const validateObjectId = require("../middlewares/validateObjectId");
 const validate = require("../middlewares/validate");
+const auth = require("../middlewares/auth");
 const _ = require("lodash");
 const Fawn = require("fawn");
 const mongoose = require("mongoose");
@@ -12,7 +13,7 @@ require("express-async-errors");
 
 Fawn.init(mongoose);
 
-router.post("/", validate(validateRental), async (req, res) => {
+router.post("/", [auth, validate(validateRental)], async (req, res) => {
   const customer = await Customer.findById(req.body.customerId);
   if (!customer) return res.status(400).send("Invalid customer id");
 
@@ -38,14 +39,14 @@ router.post("/", validate(validateRental), async (req, res) => {
   res.send(rental);
 });
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   const rentals = await Rental.find().sort("-dateOut");
   if (!rentals) return res.status(404).send("No rental in the database");
 
   res.send(rentals);
 });
 
-router.get("/:id", validateObjectId, async (req, res) => {
+router.get("/:id", [auth, validateObjectId], async (req, res) => {
   const rental = await Rental.findById(req.params.id);
   if (!rental)
     return res.status(404).send("The rental with given id cannot be found");
