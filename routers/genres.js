@@ -3,6 +3,7 @@ const validateObjectId = require("../middlewares/validateObjectId");
 const { valiadateGenre, Genre } = require("../models/genre");
 const express = require("express");
 const router = express.Router();
+require("express-async-errors");
 
 router.post("/", validate(valiadateGenre), async (req, res) => {
   const genre = new Genre({

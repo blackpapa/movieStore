@@ -8,6 +8,7 @@ const Fawn = require("fawn");
 const mongoose = require("mongoose");
 const express = require("express");
 const router = express.Router();
+require("express-async-errors");
 
 Fawn.init(mongoose);
 
