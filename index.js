@@ -14,6 +14,7 @@ const express = require("express");
 const app = express();
 
 const logger = winston.createLogger({
+  format: winston.format.simple(),
   transports: [
     new winston.transports.File({ filename: "combined.log" }),
     new winston.transports.Console(),
