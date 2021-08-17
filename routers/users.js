@@ -20,7 +20,9 @@ router.post("/", validate(validateUser), async (req, res) => {
   user.password = await bcrypt.hash(user.password, salt);
 
   await user.save();
-  res.send(user);
+
+  const token = user.generateAuthToken();
+  res.send(token);
 });
 
 module.exports = router;
