@@ -1,11 +1,12 @@
 const validate = require("../middlewares/validate");
 const validateObjectId = require("../middlewares/validateObjectId");
+const auth = require("../middlewares/auth");
 const { valiadateGenre, Genre } = require("../models/genre");
 const express = require("express");
 const router = express.Router();
 require("express-async-errors");
 
-router.post("/", validate(valiadateGenre), async (req, res) => {
+router.post("/", [auth, validate(valiadateGenre)], async (req, res) => {
   const genre = new Genre({
     name: req.body.name,
   });
@@ -14,12 +15,12 @@ router.post("/", validate(valiadateGenre), async (req, res) => {
   res.send(genre);
 });
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
   const genres = await Genre.find();
   res.send(genres);
 });
 
-router.get("/:id", validateObjectId, async (req, res) => {
+router.get("/:id", [auth, validateObjectId], async (req, res) => {
   const genre = await Genre.findById(req.params.id);
 
   if (!genre)
@@ -30,7 +31,7 @@ router.get("/:id", validateObjectId, async (req, res) => {
 
 router.put(
   "/:id",
-  [validateObjectId, validate(valiadateGenre)],
+  [auth, validateObjectId, validate(valiadateGenre)],
   async (req, res) => {
     const genre = await Genre.findByIdAndUpdate(
       req.params.id,
@@ -47,7 +48,7 @@ router.put(
   }
 );
 
-router.delete("/:id", validateObjectId, async (req, res) => {
+router.delete("/:id", [auth, validateObjectId], async (req, res) => {
   const genre = await Genre.findByIdAndDelete(req.params.id);
   if (!genre)
     return res.status(404).send("The genre with given Id cannot be found");
