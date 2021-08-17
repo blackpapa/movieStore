@@ -28,6 +28,10 @@ const logger = winston.createLogger({
   ],
 });
 
+process.on("unhandledRejection", (err) => {
+  throw err;
+});
+
 mongoose
   .connect(config.get("db"), {
     useNewUrlParser: true,
