@@ -1,6 +1,7 @@
 const validate = require("../middlewares/validate");
 const validateObjectId = require("../middlewares/validateObjectId");
 const auth = require("../middlewares/auth");
+const admin = require("../middlewares/admin");
 const { validateMovie, Movie } = require("../models/movie");
 const { Genre } = require("../models/genre");
 const _ = require("lodash");
@@ -55,7 +56,7 @@ router.put("/:id", [auth, validateObjectId], async (req, res) => {
   res.send(movie);
 });
 
-router.delete("/:id", [auth, validateObjectId], async (req, res) => {
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const movie = await Movie.findByIdAndDelete(req.params.id);
 
   if (!movie)
