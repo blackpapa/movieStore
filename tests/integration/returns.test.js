@@ -89,6 +89,7 @@ describe("/api/returns", () => {
 
   it("should calculate rental fee", async () => {
     rental.dateOut = moment().add(-7, "days").toDate();
+    await rental.save();
     const res = await exec();
 
     const rentalInDb = await Rental.findById(rental._id);
