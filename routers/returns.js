@@ -8,11 +8,10 @@
 //calculate fee
 //increase the stock
 //return rental
+const auth = require("../middlewares/auth");
 const express = require("express");
 const router = express.Router();
 
-router.post("/", (req, res) => {
-  res.send("test");
-});
+router.post("/", auth, (req, res) => {});
 
 module.exports = router;

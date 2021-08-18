@@ -1,1 +1,2 @@
-{"db": "mongodb://localhost/store_tests"}
+{"db": "mongodb://localhost/store_tests",
+"jwtPrivateKey": "12345"}
