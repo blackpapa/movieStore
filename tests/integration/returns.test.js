@@ -77,4 +77,14 @@ describe("/api/returns", () => {
     const res = await exec();
     expect(res.status).toBe(400);
   });
+
+  it("should set return date", async () => {
+    const res = await exec();
+    const rentalInDb = await Rental.findById(rental._id);
+
+    expect(res.status).toBe(200);
+    expect(rentalInDb.dateReturn).toBeDefined();
+  });
+
+  it("should calculate rental fee", async () => {});
 });
