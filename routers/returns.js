@@ -18,11 +18,16 @@ router.post("/", auth, async (req, res) => {
   if (!req.body.movieId) return res.status(400).send("Invalid movieId");
 
   const rental = await Rental.findOne({
-    customerId: req.body.customerId,
-    movieId: req.body.movieId,
+    "customer._id": req.body.customerId,
+    "movie._id": req.body.movieId,
   });
 
   if (!rental) return res.status(404).send("The rental is not found");
+
+  if (rental.dateReturn)
+    return res.status(400).send("The rental is already processed");
+
+  res.send("test");
 });
 
 module.exports = router;
