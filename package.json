@@ -1,4 +1,11 @@
 {
+  "name": "movie_store",
+  "author": "Andy Chen",
+  "main": "index.js",
+  "version":"1.0.0",
+"scripts": {
+    "test": "jest --watchAll",
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "config": "^3.3.6",
