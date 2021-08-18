@@ -12,6 +12,9 @@ const auth = require("../middlewares/auth");
 const express = require("express");
 const router = express.Router();
 
-router.post("/", auth, (req, res) => {});
+router.post("/", auth, (req, res) => {
+  if (!req.body.customerId) return res.status(400).send("Invalid customerId");
+  if (!req.body.movieId) return res.status(400).send("Invalid movieId");
+});
 
 module.exports = router;
