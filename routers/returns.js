@@ -9,12 +9,20 @@
 //increase the stock
 //return rental
 const auth = require("../middlewares/auth");
+const { Rental } = require("../models/rental");
 const express = require("express");
 const router = express.Router();
 
-router.post("/", auth, (req, res) => {
+router.post("/", auth, async (req, res) => {
   if (!req.body.customerId) return res.status(400).send("Invalid customerId");
   if (!req.body.movieId) return res.status(400).send("Invalid movieId");
+
+  const rental = await Rental.findOne({
+    customerId: req.body.customerId,
+    movieId: req.body.movieId,
+  });
+
+  if (!rental) return res.status(404).send("The rental is not found");
 });
 
 module.exports = router;

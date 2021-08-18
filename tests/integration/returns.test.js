@@ -10,6 +10,13 @@ describe("/api/returns", () => {
   let rental;
   let token;
 
+  const exec = () => {
+    return request(server)
+      .post("/api/returns")
+      .set("x-auth-token", token)
+      .send({ customerId, movieId });
+  };
+
   beforeEach(async () => {
     server = require("../../index");
     customerId = mongoose.Types.ObjectId();
@@ -41,23 +48,25 @@ describe("/api/returns", () => {
 
   it("should return 401 if user is not logged in", async () => {
     token = "";
-    const res = await request(server).post("/api/returns");
+    const res = await exec();
     expect(res.status).toBe(401);
   });
 
   it("should return 400 if customerId is not porvided", async () => {
-    const res = await request(server)
-      .post("/api/returns")
-      .set("x-auth-token", token)
-      .send({ movieId });
+    customerId = "";
+    const res = await exec();
     expect(res.status).toBe(400);
   });
 
   it("should return 400 if movieId is not porvided", async () => {
-    const res = await request(server)
-      .post("/api/returns")
-      .set("x-auth-token", token)
-      .send({ customerId });
+    movieId = "";
+    const res = await exec();
     expect(res.status).toBe(400);
+  });
+
+  it("should return 404 if rental is not found", async () => {
+    await Rental.remove({});
+    const res = await exec();
+    expect(res.status).toBe(404);
   });
 });
