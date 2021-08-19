@@ -1,6 +1,7 @@
 const request = require("supertest");
 const { Rental } = require("../../models/rental");
 const { User } = require("../../models/user");
+const { Movie } = require("../../models/movie");
 const mongoose = require("mongoose");
 const moment = require("moment");
 let server;
@@ -9,6 +10,7 @@ describe("/api/returns", () => {
   let customerId;
   let movieId;
   let rental;
+  let movie;
   let token;
 
   const exec = () => {
@@ -23,6 +25,15 @@ describe("/api/returns", () => {
     customerId = mongoose.Types.ObjectId();
     movieId = mongoose.Types.ObjectId();
     token = new User().generateAuthToken();
+
+    movie = new Movie({
+      _id: movieId,
+      title: "monster",
+      numberInStock: 10,
+      dailyRentalRate: 2,
+    });
+
+    await movie.save();
 
     rental = new Rental({
       customer: {
@@ -45,6 +56,7 @@ describe("/api/returns", () => {
   afterEach(async () => {
     await server.close();
     await Rental.remove({});
+    await Movie.remove({});
   });
 
   it("should return 401 if user is not logged in", async () => {
@@ -96,5 +108,13 @@ describe("/api/returns", () => {
 
     expect(res.status).toBe(200);
     expect(rentalInDb.rentalFee).toBe(14);
+  });
+
+  it("should increase stock", async () => {
+    const res = await exec();
+    const movieInDb = await Movie.findById(movieId);
+
+    expect(res.status).toBe(200);
+    expect(movieInDb.numberInStock).toBe(11);
   });
 });
