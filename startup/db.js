@@ -9,6 +9,6 @@ module.exports = function () {
       useUnifiedTopology: true,
       useFindAndModify: false,
     })
-    .then(() => logger.info("Connected with database..."))
+    .then(() => logger.info(`Connected with database ${config.get("db")}...`))
     .catch((err) => logger.info(err, "Fail to connect with database..."));
 };
