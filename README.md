@@ -1,4 +1,4 @@
-# movieStore
+# movieStore (Back End)
 A small movie store which is built with express.js and mongoDb.
 
 
