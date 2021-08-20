@@ -9,10 +9,7 @@ router.post("/", auth, async (req, res) => {
   if (!req.body.customerId) return res.status(400).send("Invalid customerId");
   if (!req.body.movieId) return res.status(400).send("Invalid movieId");
 
-  const rental = await Rental.findOne({
-    "customer._id": req.body.customerId,
-    "movie._id": req.body.movieId,
-  });
+  const rental = await Rental.lookUp(req.body.customerId, req.body.movieId);
 
   if (!rental) return res.status(404).send("The rental is not found");
 

@@ -32,7 +32,7 @@ const rentalSchema = new mongoose.Schema({
   rentalFee: { type: Number, min: 0 },
 });
 
-rentalSchema.static.lookUp = function (customerId, movieId) {
+rentalSchema.statics.lookUp = function (customerId, movieId) {
   return this.findOne({
     "customer._id": customerId,
     "movie._id": movieId,
