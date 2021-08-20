@@ -117,4 +117,20 @@ describe("/api/returns", () => {
     expect(res.status).toBe(200);
     expect(movieInDb.numberInStock).toBe(11);
   });
+
+  it("should return rental", async () => {
+    const res = await exec();
+
+    expect(res.status).toBe(200);
+    expect(Object.keys(res.body)).toEqual(
+      expect.arrayContaining([
+        "_id",
+        "customer",
+        "movie",
+        "dateOut",
+        "dateReturn",
+        "rentalFee",
+      ])
+    );
+  });
 });

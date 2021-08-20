@@ -1,13 +1,3 @@
-//{customerId, movieId}
-//return 401 if user is not logged in
-//return 400 if customerId is not provided
-//return 400 if movieId is not provided
-//return 404 if rental is not found
-//return 400 if rental is already process
-//set return date
-//calculate fee
-//increase the stock
-//return rental
 const auth = require("../middlewares/auth");
 const { Rental } = require("../models/rental");
 const { Movie } = require("../models/movie");
@@ -39,7 +29,7 @@ router.post("/", auth, async (req, res) => {
     $inc: { numberInStock: 1 },
   });
 
-  res.send("test");
+  res.send(rental);
 });
 
 module.exports = router;
