@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const config = require("config");
+const { Genre } = require("./models/genre");
+const { Movie } = require("./models/movie");
 
 const data = [
   {
@@ -38,6 +40,9 @@ const data = [
 
 async function seed() {
   mongoose.connect(config.get("db"));
+
+  await Genre.deleteMany({});
+  await Movie.deleteMany({});
 }
 
 seed();
