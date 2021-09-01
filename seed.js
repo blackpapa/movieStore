@@ -39,13 +39,16 @@ const data = [
 ];
 
 async function seed() {
-  mongoose.connect(config.get("db"));
+  mongoose.connect(config.get("db"), {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  });
 
   await Genre.deleteMany({});
   await Movie.deleteMany({});
 
   for (let genre of data) {
-    const { _id: genreId } = await new Genre({ name: genre.name });
+    const { _id: genreId } = await new Genre({ name: genre.name }).save();
     const movies = genre.movies.map((movie) => ({
       ...movie,
       genre: { _id: genreId, name: genre.name },
