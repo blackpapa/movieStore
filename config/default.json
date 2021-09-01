@@ -1,2 +1,3 @@
 {"db": "mongodb://localhost/store",
-"jwtPrivateKey": "12345"}
+"jwtPrivateKey": "12345",
+"requireAuth": false}
