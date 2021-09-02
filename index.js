@@ -1,11 +1,10 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
 
 const logger = require("./startup/logging")();
 require("./startup/validation")();
 require("./startup/config")();
-app.use(cors());
+require("./startup/cors")(app);
 require("./startup/routes")(app);
 require("./startup/db")();
 
