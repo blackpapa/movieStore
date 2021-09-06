@@ -1,1 +1,2 @@
-{"jwtPrivateKey": "jwtPrivateKey_moviestore"}
+{"jwtPrivateKey": "jwtPrivateKey_moviestore",
+"db": "store_db"}
