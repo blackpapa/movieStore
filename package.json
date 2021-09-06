@@ -4,6 +4,8 @@
   "main": "index.js",
   "version": "1.0.0",
   "scripts": {
+    "start": "node index.js",
+    "seed": "node seed.js",
     "test": "jest --watchAll"
   },
   "dependencies": {
