@@ -16,7 +16,7 @@ router.post("/", [auth, validate(valiadateGenre)], async (req, res) => {
   res.send(genre);
 });
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const genres = await Genre.find();
   res.send(genres);
 });

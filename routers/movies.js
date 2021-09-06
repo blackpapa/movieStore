@@ -24,7 +24,7 @@ router.post("/", [auth, validate(validateMovie)], async (req, res) => {
   res.send(movie);
 });
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const movies = await Movie.find();
   if (!movies) return res.status(404).send("No movie in the database");
   res.send(movies);
