@@ -28,6 +28,10 @@ const movieSchema = new mongoose.Schema({
     max: 255,
     required: true,
   },
+  liked: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const Movie = mongoose.model("Movie", movieSchema);
@@ -38,6 +42,7 @@ const validateMovie = (movie) => {
     genreId: Joi.objectId().required(),
     numberInStock: Joi.number().min(0).max(20).required(),
     dailyRentalRate: Joi.number().min(0).max(255).required(),
+    liked: Joi.boolean(),
   });
   return schema.validate(movie);
 };
