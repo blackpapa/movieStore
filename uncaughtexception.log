@@ -236,3 +236,210 @@
     }
   ]
 }
+{
+  error: ReferenceError: admin is not defined
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\routers\customers.js:55:30)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\routes.js:3:19)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\index.js:8:1)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14),
+  level: '\x1B[31merror\x1B[39m',
+  message: 'uncaughtException: admin is not defined\n' +
+    'ReferenceError: admin is not defined\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\routers\\customers.js:55:30)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\routes.js:3:19)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\index.js:8:1)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)',
+  stack: 'ReferenceError: admin is not defined\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\routers\\customers.js:55:30)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\routes.js:3:19)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\index.js:8:1)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)',
+  exception: true,
+  date: 'Sat Sep 11 2021 09:55:58 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 5368,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 67801088,
+      heapTotal: 36933632,
+      heapUsed: 22614888,
+      external: 20483977,
+      arrayBuffers: 18885663
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 1209512 },
+  trace: [
+    {
+      column: 30,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\routers\\customers.js',
+      function: null,
+      line: 55,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 19,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\routes.js',
+      function: null,
+      line: 3,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 1,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\index.js',
+      function: null,
+      line: 8,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    }
+  ]
+}

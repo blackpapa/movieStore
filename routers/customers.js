@@ -1,6 +1,7 @@
 const validate = require("../middlewares/validate");
 const validateObjectId = require("../middlewares/validateObjectId");
 const auth = require("../middlewares/auth");
+const admin = require("../middlewares/admin");
 const { validateCustomer, Customer } = require("../models/customer");
 const express = require("express");
 const router = express.Router();
@@ -17,7 +18,7 @@ router.post("/", [auth, validate(validateCustomer)], async (req, res) => {
   res.send(customer);
 });
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   const customers = await Customer.find();
   if (!customers) return res.status(404).send("No customer in the database");
 
@@ -52,7 +53,7 @@ router.put(
   }
 );
 
-router.delete("/:id", [auth, validateObjectId], async (req, res) => {
+router.delete("/:id", [auth, admin, validateObjectId], async (req, res) => {
   const customer = await Customer.findByIdAndDelete(req.params.id);
 
   if (!customer)
