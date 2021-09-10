@@ -22,7 +22,7 @@ router.post("/", validate(validateReq), async (req, res) => {
 
   if (!user) return res.status(400).send("Invalid user or password");
 
-  const isValid = bcrypt.compare(req.body.password, user.password);
+  const isValid = await bcrypt.compare(req.body.password, user.password);
   if (!isValid) return res.status(400).send("Invalid user or password");
 
   const token = user.generateAuthToken();
