@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const config = require("config");
 const { Genre } = require("./models/genre");
 const { Movie } = require("./models/movie");
+const { Customer } = require("./models/customer");
 
 const data = [
   {
@@ -38,6 +39,12 @@ const data = [
   },
 ];
 
+const customers = [
+  { name: "Andy", isGold: true, phone: "168888" },
+  { name: "Janelle", isGold: true, phone: "898928" },
+  { name: "Ben", isGold: false, phone: "3312524" },
+];
+
 async function seed() {
   mongoose.connect(config.get("db"), {
     useUnifiedTopology: true,
@@ -46,6 +53,7 @@ async function seed() {
 
   await Genre.deleteMany({});
   await Movie.deleteMany({});
+  await Customer.deleteMany({});
 
   for (let genre of data) {
     const { _id: genreId } = await new Genre({ name: genre.name }).save();
@@ -56,6 +64,7 @@ async function seed() {
 
     await Movie.insertMany(movies);
   }
+  await Customer.insertMany(customers);
 
   mongoose.disconnect();
   console.log("Done");
