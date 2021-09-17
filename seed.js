@@ -43,6 +43,9 @@ const customers = [
   { name: "Andy", isGold: true, phone: "168888" },
   { name: "Janelle", isGold: true, phone: "898928" },
   { name: "Ben", isGold: false, phone: "3312524" },
+  { name: "Jack", isGold: true, phone: "168888" },
+  { name: "Trevoer", isGold: true, phone: "898928" },
+  { name: "Matrias", isGold: false, phone: "3312524" },
 ];
 
 async function seed() {
@@ -67,7 +70,6 @@ async function seed() {
   await Customer.insertMany(customers);
 
   mongoose.disconnect();
-  console.log("Done");
 }
 
 seed();
