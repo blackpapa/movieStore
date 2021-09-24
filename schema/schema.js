@@ -6,6 +6,7 @@ const {
   GraphQLSchema,
 } = require("graphql");
 const { Genre } = require("../models/genre");
+const { Movie } = require("../models/movie");
 
 const movieType = new GraphQLObjectType({
   name: "Movie",
@@ -32,8 +33,9 @@ const RootQuery = new GraphQLObjectType({
     movie: {
       type: movieType,
       args: { id: { type: GraphQLString } },
-      resolve(parent, args) {
+      async resolve(parent, args) {
         //code to get data from database
+        return await Movie.findById(args.id);
       },
     },
     genre: {
