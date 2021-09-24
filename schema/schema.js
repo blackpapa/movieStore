@@ -4,6 +4,7 @@ const {
   GraphQLInt,
   GraphQLBoolean,
   GraphQLSchema,
+  GraphQLList,
 } = require("graphql");
 const { Genre } = require("../models/genre");
 const { Movie } = require("../models/movie");
@@ -25,6 +26,13 @@ const genreType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
+    movies: {
+      type: new GraphQLList(movieType),
+      async resolve(parent, args) {
+        const movies = await Movie.find();
+        return movies.filter((m) => m.genre._id.toString() === parent.id);
+      },
+    },
   }),
 });
 
