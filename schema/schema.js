@@ -9,6 +9,7 @@ const {
 const { Genre } = require("../models/genre");
 const { Movie } = require("../models/movie");
 const { Customer } = require("../models/customer");
+const { Rental } = require("../models/rental");
 
 const movieType = new GraphQLObjectType({
   name: "Movie",
@@ -83,6 +84,13 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: GraphQLString } },
       async resolve(parent, args) {
         return await Customer.findById(args.id);
+      },
+    },
+    rental: {
+      type: rentalType,
+      args: { id: { type: GraphQLString } },
+      async resolve(parent, args) {
+        return await Rental.findById(args.id);
       },
     },
     movies: {
