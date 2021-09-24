@@ -8,33 +8,33 @@ const data = [
   {
     name: "Comedy",
     movies: [
-      { title: "Airplane", numberInStock: 5, dailyRentalRate: 2 },
-      { title: "The Hangover", numberInStock: 10, dailyRentalRate: 2 },
-      { title: "Wedding Crashers", numberInStock: 15, dailyRentalRate: 2 },
+      { title: "Airplane", numberInStock: 5, dailyRentalRate: 3 },
+      { title: "The Hangover", numberInStock: 12, dailyRentalRate: 2 },
+      { title: "Wedding Crashers", numberInStock: 13, dailyRentalRate: 2 },
     ],
   },
   {
     name: "Action",
     movies: [
-      { title: "Die Hard", numberInStock: 5, dailyRentalRate: 2 },
-      { title: "Terminator", numberInStock: 10, dailyRentalRate: 2 },
-      { title: "The Avengers", numberInStock: 15, dailyRentalRate: 2 },
+      { title: "Die Hard", numberInStock: 5, dailyRentalRate: 4 },
+      { title: "Terminator", numberInStock: 11, dailyRentalRate: 5 },
+      { title: "The Avengers", numberInStock: 16, dailyRentalRate: 6 },
     ],
   },
   {
     name: "Romance",
     movies: [
-      { title: "The Notebook", numberInStock: 5, dailyRentalRate: 2 },
+      { title: "The Notebook", numberInStock: 5, dailyRentalRate: 3 },
       { title: "When Harry Met Sally", numberInStock: 10, dailyRentalRate: 2 },
-      { title: "Pretty Woman", numberInStock: 15, dailyRentalRate: 2 },
+      { title: "Pretty Woman", numberInStock: 15, dailyRentalRate: 5 },
     ],
   },
   {
     name: "Thriller",
     movies: [
       { title: "The Sixth Sense", numberInStock: 5, dailyRentalRate: 2 },
-      { title: "Gone Girl", numberInStock: 10, dailyRentalRate: 2 },
-      { title: "The Others", numberInStock: 15, dailyRentalRate: 2 },
+      { title: "Gone Girl", numberInStock: 10, dailyRentalRate: 1 },
+      { title: "The Others", numberInStock: 14, dailyRentalRate: 3 },
     ],
   },
 ];
@@ -70,6 +70,7 @@ async function seed() {
   await Customer.insertMany(customers);
 
   mongoose.disconnect();
+  console.log("Done");
 }
 
 seed();
