@@ -13,6 +13,7 @@ const movieType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLString },
     title: { type: GraphQLString },
+    genre: { type: genreType },
     numberInStock: { type: GraphQLInt },
     dailyRentalRate: { type: GraphQLInt },
     liked: { type: GraphQLBoolean },
