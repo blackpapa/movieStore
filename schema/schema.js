@@ -54,6 +54,18 @@ const RootQuery = new GraphQLObjectType({
         return await Genre.findById(args.id);
       },
     },
+    movies: {
+      type: new GraphQLList(movieType),
+      async resolve(parent, args) {
+        return await Movie.find();
+      },
+    },
+    genres: {
+      type: new GraphQLList(genreType),
+      async resolve(parent, args) {
+        return await Genre.find();
+      },
+    },
   },
 });
 
