@@ -4,6 +4,7 @@ const app = express();
 const logger = require("./startup/logging")();
 require("./startup/validation")();
 require("./startup/config")();
+require("./startup/graphql")(app);
 require("./startup/cors")(app);
 require("./startup/routes")(app);
 require("./startup/db")();

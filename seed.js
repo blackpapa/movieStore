@@ -3,6 +3,7 @@ const config = require("config");
 const { Genre } = require("./models/genre");
 const { Movie } = require("./models/movie");
 const { Customer } = require("./models/customer");
+const { Rental } = require("./models/rental");
 
 const data = [
   {
@@ -57,6 +58,7 @@ async function seed() {
   await Genre.deleteMany({});
   await Movie.deleteMany({});
   await Customer.deleteMany({});
+  await Rental.deleteMany({});
 
   for (let genre of data) {
     const { _id: genreId } = await new Genre({ name: genre.name }).save();

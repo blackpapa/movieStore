@@ -443,3 +443,1047 @@
     }
   ]
 }
+{
+  error: TypeError: graphqlHTTP is not a function
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\index.js:9:21)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+      at internal/main/run_main_module.js:17:47,
+  level: '\x1B[31merror\x1B[39m',
+  message: 'uncaughtException: graphqlHTTP is not a function\n' +
+    'TypeError: graphqlHTTP is not a function\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\index.js:9:21)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n' +
+    '    at internal/main/run_main_module.js:17:47',
+  stack: 'TypeError: graphqlHTTP is not a function\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\index.js:9:21)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n' +
+    '    at internal/main/run_main_module.js:17:47',
+  exception: true,
+  date: 'Fri Sep 24 2021 10:24:37 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 18900,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 44544000,
+      heapTotal: 29360128,
+      heapUsed: 16747544,
+      external: 1765144,
+      arrayBuffers: 263254
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 583925 },
+  trace: [
+    {
+      column: 21,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\index.js',
+      function: null,
+      line: 9,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'internal/modules/run_main.js',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 76,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'internal/main/run_main_module.js',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}
+{
+  error: Error: Cannot find module './schema/schema'
+  Require stack:
+  - C:\Users\andyc\myProject\movieStore\startup\graphql.js
+  - C:\Users\andyc\myProject\movieStore\index.js
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)
+      at Function.Module._load (internal/modules/cjs/loader.js:746:27)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\graphql.js:1:16)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ]
+  },
+  level: '\x1B[31merror\x1B[39m',
+  message: "uncaughtException: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    "Error: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)',
+  stack: "Error: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)',
+  exception: true,
+  date: 'Fri Sep 24 2021 14:41:52 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 19088,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 40767488,
+      heapTotal: 18690048,
+      heapUsed: 10510784,
+      external: 1594616,
+      arrayBuffers: 92726
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 599361 },
+  trace: [
+    {
+      column: 15,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._resolveFilename',
+      line: 902,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 746,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    }
+  ]
+}
+{
+  error: Error: Cannot find module './schema/schema'
+  Require stack:
+  - C:\Users\andyc\myProject\movieStore\startup\graphql.js
+  - C:\Users\andyc\myProject\movieStore\index.js
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)
+      at Function.Module._load (internal/modules/cjs/loader.js:746:27)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\graphql.js:1:16)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ]
+  },
+  level: '\x1B[31merror\x1B[39m',
+  message: "uncaughtException: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    "Error: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)',
+  stack: "Error: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)',
+  exception: true,
+  date: 'Fri Sep 24 2021 14:41:55 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 25608,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 40919040,
+      heapTotal: 18690048,
+      heapUsed: 10512840,
+      external: 1594616,
+      arrayBuffers: 92726
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 599364 },
+  trace: [
+    {
+      column: 15,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._resolveFilename',
+      line: 902,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 746,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    }
+  ]
+}
+{
+  error: Error: Cannot find module './schema/schema'
+  Require stack:
+  - C:\Users\andyc\myProject\movieStore\startup\graphql.js
+  - C:\Users\andyc\myProject\movieStore\index.js
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)
+      at Function.Module._load (internal/modules/cjs/loader.js:746:27)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\graphql.js:1:16)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ]
+  },
+  level: '\x1B[31merror\x1B[39m',
+  message: "uncaughtException: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    "Error: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)',
+  stack: "Error: Cannot find module './schema/schema'\n" +
+    'Require stack:\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js\n' +
+    '- C:\\Users\\andyc\\myProject\\movieStore\\index.js\n' +
+    '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:902:15)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:746:27)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)',
+  exception: true,
+  date: 'Fri Sep 24 2021 14:42:11 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 20152,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 40361984,
+      heapTotal: 18427904,
+      heapUsed: 10596608,
+      external: 1594616,
+      arrayBuffers: 92726
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 599380 },
+  trace: [
+    {
+      column: 15,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._resolveFilename',
+      line: 902,
+      method: '_resolveFilename',
+      native: false
+    },
+    {
+      column: 27,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 746,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    }
+  ]
+}
+{
+  error: C:\Users\andyc\myProject\movieStore\schema\schema.js:74
+      movies: {
+      ^^^^^^
+  
+  SyntaxError: Unexpected identifier
+      at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+      at Module._compile (internal/modules/cjs/loader.js:1049:27)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\graphql.js:1:16)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10),
+  level: '\x1B[31merror\x1B[39m',
+  message: 'uncaughtException: Unexpected identifier\n' +
+    'C:\\Users\\andyc\\myProject\\movieStore\\schema\\schema.js:74\n' +
+    '    movies: {\n' +
+    '    ^^^^^^\n' +
+    '\n' +
+    'SyntaxError: Unexpected identifier\n' +
+    '    at wrapSafe (internal/modules/cjs/loader.js:1001:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1049:27)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)',
+  stack: 'C:\\Users\\andyc\\myProject\\movieStore\\schema\\schema.js:74\n' +
+    '    movies: {\n' +
+    '    ^^^^^^\n' +
+    '\n' +
+    'SyntaxError: Unexpected identifier\n' +
+    '    at wrapSafe (internal/modules/cjs/loader.js:1001:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1049:27)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)',
+  exception: true,
+  date: 'Fri Sep 24 2021 14:47:14 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 25240,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 40751104,
+      heapTotal: 18427904,
+      heapUsed: 10526032,
+      external: 1594616,
+      arrayBuffers: 92726
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 599683 },
+  trace: [
+    {
+      column: 16,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'wrapSafe',
+      line: 1001,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1049,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    }
+  ]
+}
+{
+  error: C:\Users\andyc\myProject\movieStore\schema\schema.js:55
+      dateReturn: (type: GraphQLString),
+                       ^
+  
+  SyntaxError: Unexpected token ':'
+      at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+      at Module._compile (internal/modules/cjs/loader.js:1049:27)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\graphql.js:1:16)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10),
+  level: '\x1B[31merror\x1B[39m',
+  message: "uncaughtException: Unexpected token ':'\n" +
+    'C:\\Users\\andyc\\myProject\\movieStore\\schema\\schema.js:55\n' +
+    '    dateReturn: (type: GraphQLString),\n' +
+    '                     ^\n' +
+    '\n' +
+    "SyntaxError: Unexpected token ':'\n" +
+    '    at wrapSafe (internal/modules/cjs/loader.js:1001:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1049:27)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)',
+  stack: 'C:\\Users\\andyc\\myProject\\movieStore\\schema\\schema.js:55\n' +
+    '    dateReturn: (type: GraphQLString),\n' +
+    '                     ^\n' +
+    '\n' +
+    "SyntaxError: Unexpected token ':'\n" +
+    '    at wrapSafe (internal/modules/cjs/loader.js:1001:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1049:27)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)',
+  exception: true,
+  date: 'Fri Sep 24 2021 16:00:22 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 23340,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 40808448,
+      heapTotal: 18690048,
+      heapUsed: 10566880,
+      external: 1594616,
+      arrayBuffers: 92726
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 604071 },
+  trace: [
+    {
+      column: 16,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'wrapSafe',
+      line: 1001,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1049,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    }
+  ]
+}
+{
+  error: C:\Users\andyc\myProject\movieStore\schema\schema.js:56
+      dateOut: { type: GraphQLString },
+      ^^^^^^^
+  
+  SyntaxError: Unexpected identifier
+      at wrapSafe (internal/modules/cjs/loader.js:1001:16)
+      at Module._compile (internal/modules/cjs/loader.js:1049:27)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Module.require (internal/modules/cjs/loader.js:974:19)
+      at require (internal/modules/cjs/helpers.js:92:18)
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\startup\graphql.js:1:16)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10),
+  level: '\x1B[31merror\x1B[39m',
+  message: 'uncaughtException: Unexpected identifier\n' +
+    'C:\\Users\\andyc\\myProject\\movieStore\\schema\\schema.js:56\n' +
+    '    dateOut: { type: GraphQLString },\n' +
+    '    ^^^^^^^\n' +
+    '\n' +
+    'SyntaxError: Unexpected identifier\n' +
+    '    at wrapSafe (internal/modules/cjs/loader.js:1001:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1049:27)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)',
+  stack: 'C:\\Users\\andyc\\myProject\\movieStore\\schema\\schema.js:56\n' +
+    '    dateOut: { type: GraphQLString },\n' +
+    '    ^^^^^^^\n' +
+    '\n' +
+    'SyntaxError: Unexpected identifier\n' +
+    '    at wrapSafe (internal/modules/cjs/loader.js:1001:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1049:27)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Module.require (internal/modules/cjs/loader.js:974:19)\n' +
+    '    at require (internal/modules/cjs/helpers.js:92:18)\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js:1:16)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)',
+  exception: true,
+  date: 'Fri Sep 24 2021 16:01:39 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 1980,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 40808448,
+      heapTotal: 18690048,
+      heapUsed: 10543400,
+      external: 1594616,
+      arrayBuffers: 92726
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 604148 },
+  trace: [
+    {
+      column: 16,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'wrapSafe',
+      line: 1001,
+      method: null,
+      native: false
+    },
+    {
+      column: 27,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1049,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 19,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.require',
+      line: 974,
+      method: 'require',
+      native: false
+    },
+    {
+      column: 18,
+      file: 'internal/modules/cjs/helpers.js',
+      function: 'require',
+      line: 92,
+      method: null,
+      native: false
+    },
+    {
+      column: 16,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\startup\\graphql.js',
+      function: null,
+      line: 1,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    }
+  ]
+}

@@ -23,8 +23,8 @@ router.post("/", [auth, validate(validateRental)], async (req, res) => {
     return res.status(404).send("The movie is out of stock");
 
   const rental = new Rental({
-    customer: _.pick(customer, ["name", "phone", "isGold"]),
-    movie: _.pick(movie, ["title", "dailyRentalRate"]),
+    customer: _.pick(customer, ["_id", "name", "phone", "isGold"]),
+    movie: _.pick(movie, ["_id", "title", "dailyRentalRate"]),
   });
 
   try {
