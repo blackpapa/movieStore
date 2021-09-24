@@ -111,6 +111,12 @@ const RootQuery = new GraphQLObjectType({
         return await Customer.find();
       },
     },
+    rentals: {
+      type: new GraphQLList(rentalType),
+      async resolve(parent, args) {
+        return await Rental.find();
+      },
+    },
   },
 });
 
