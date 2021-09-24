@@ -40,7 +40,7 @@ const RootQuery = new GraphQLObjectType({
       type: genreType,
       args: { id: { type: GraphQLString } },
       async resolve(parent, args) {
-        await Genre.findById(args.id);
+        return await Genre.findById(args.id);
       },
     },
   },
