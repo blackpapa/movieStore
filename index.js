@@ -1,3 +1,4 @@
+const schema = require("./schema/schema");
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
 const app = express();
@@ -5,7 +6,7 @@ const app = express();
 const logger = require("./startup/logging")();
 require("./startup/validation")();
 require("./startup/config")();
-app.use("graphql/", graphqlHTTP());
+app.use("graphql/", graphqlHTTP({ schema, graphiql: true }));
 require("./startup/cors")(app);
 require("./startup/routes")(app);
 require("./startup/db")();
