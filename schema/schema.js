@@ -5,6 +5,7 @@ const {
   GraphQLBoolean,
   GraphQLSchema,
 } = require("graphql");
+const { Genre } = require("../models/genre");
 
 const movieType = new GraphQLObjectType({
   name: "Movie",
@@ -17,6 +18,14 @@ const movieType = new GraphQLObjectType({
   }),
 });
 
+const genreType = new GraphQLObjectType({
+  name: "Genre",
+  fields: () => ({
+    id: { type: GraphQLString },
+    name: { type: GraphQLString },
+  }),
+});
+
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
@@ -25,6 +34,13 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: GraphQLString } },
       resolve(parent, args) {
         //code to get data from database
+      },
+    },
+    genre: {
+      type: genreType,
+      args: { id: { type: GraphQLString } },
+      async resolve(parent, args) {
+        await Genre.findById(args.id);
       },
     },
   },
