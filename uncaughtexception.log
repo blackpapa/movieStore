@@ -443,3 +443,111 @@
     }
   ]
 }
+{
+  error: TypeError: graphqlHTTP is not a function
+      at Object.<anonymous> (C:\Users\andyc\myProject\movieStore\index.js:9:21)
+      at Module._compile (internal/modules/cjs/loader.js:1085:14)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)
+      at Module.load (internal/modules/cjs/loader.js:950:32)
+      at Function.Module._load (internal/modules/cjs/loader.js:790:14)
+      at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+      at internal/main/run_main_module.js:17:47,
+  level: '\x1B[31merror\x1B[39m',
+  message: 'uncaughtException: graphqlHTTP is not a function\n' +
+    'TypeError: graphqlHTTP is not a function\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\index.js:9:21)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n' +
+    '    at internal/main/run_main_module.js:17:47',
+  stack: 'TypeError: graphqlHTTP is not a function\n' +
+    '    at Object.<anonymous> (C:\\Users\\andyc\\myProject\\movieStore\\index.js:9:21)\n' +
+    '    at Module._compile (internal/modules/cjs/loader.js:1085:14)\n' +
+    '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)\n' +
+    '    at Module.load (internal/modules/cjs/loader.js:950:32)\n' +
+    '    at Function.Module._load (internal/modules/cjs/loader.js:790:14)\n' +
+    '    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n' +
+    '    at internal/main/run_main_module.js:17:47',
+  exception: true,
+  date: 'Fri Sep 24 2021 10:24:37 GMT+1000 (Australian Eastern Standard Time)',
+  process: {
+    pid: 18900,
+    uid: null,
+    gid: null,
+    cwd: 'C:\\Users\\andyc\\myProject\\movieStore',
+    execPath: 'C:\\Program Files\\nodejs\\node.exe',
+    version: 'v14.17.1',
+    argv: [
+      'C:\\Program Files\\nodejs\\node.exe',
+      'C:\\Users\\andyc\\myProject\\movieStore\\index.js'
+    ],
+    memoryUsage: {
+      rss: 44544000,
+      heapTotal: 29360128,
+      heapUsed: 16747544,
+      external: 1765144,
+      arrayBuffers: 263254
+    }
+  },
+  os: { loadavg: [ 0, 0, 0 ], uptime: 583925 },
+  trace: [
+    {
+      column: 21,
+      file: 'C:\\Users\\andyc\\myProject\\movieStore\\index.js',
+      function: null,
+      line: 9,
+      method: null,
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._compile',
+      line: 1085,
+      method: '_compile',
+      native: false
+    },
+    {
+      column: 10,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._extensions..js',
+      line: 1114,
+      method: '.js',
+      native: false
+    },
+    {
+      column: 32,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module.load',
+      line: 950,
+      method: 'load',
+      native: false
+    },
+    {
+      column: 14,
+      file: 'internal/modules/cjs/loader.js',
+      function: 'Module._load',
+      line: 790,
+      method: '_load',
+      native: false
+    },
+    {
+      column: 12,
+      file: 'internal/modules/run_main.js',
+      function: 'Function.executeUserEntryPoint [as runMain]',
+      line: 76,
+      method: 'executeUserEntryPoint [as runMain]',
+      native: false
+    },
+    {
+      column: 47,
+      file: 'internal/main/run_main_module.js',
+      function: null,
+      line: 17,
+      method: null,
+      native: false
+    }
+  ]
+}
