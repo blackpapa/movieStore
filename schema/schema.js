@@ -45,6 +45,13 @@ const customerType = new GraphQLObjectType({
     name: { type: GraphQLString },
     isGold: { type: GraphQLBoolean },
     phone: { type: GraphQLString },
+    rentals: {
+      type: new GraphQLList(rentalType),
+      async resolve(parent, args) {
+        const rentals = await Rental.find();
+        return rentals.filter((r) => r.customer._id.toString() === parent.id);
+      },
+    },
   }),
 });
 
