@@ -47,6 +47,18 @@ const customerType = new GraphQLObjectType({
   }),
 });
 
+const rentalType = new GraphQLObjectType({
+  name: "Rental",
+  fields: () => ({
+    id: { type: GraphQLString },
+    customer: { type: customerType },
+    movie: { type: movieType },
+    dateOut: { type: GraphQLString },
+    dateReturn: { type: GraphQLString },
+    rentalFee: { type: GraphQLInt },
+  }),
+});
+
 //RootQuery
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
@@ -83,6 +95,12 @@ const RootQuery = new GraphQLObjectType({
       type: new GraphQLList(genreType),
       async resolve(parent, args) {
         return await Genre.find();
+      },
+    },
+    customers: {
+      type: new GraphQLList(customerType),
+      async resolve(parent, args) {
+        return await Customer.find();
       },
     },
   },
