@@ -20,6 +20,14 @@ const MovieType = new GraphQLObjectType({
     numberInStock: { type: GraphQLInt },
     dailyRentalRate: { type: GraphQLInt },
     liked: { type: GraphQLBoolean },
+    rentalsCount: {
+      type: GraphQLInt,
+      async resolve(parent, args) {
+        const rentals = await Rental.find();
+        return rentals.filter((r) => r.movie._id.toString() === parent.id)
+          .length;
+      },
+    },
   }),
 });
 
