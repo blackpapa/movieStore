@@ -36,6 +36,7 @@ rentalSchema.statics.lookUp = function (customerId, movieId) {
   return this.findOne({
     "customer._id": customerId,
     "movie._id": movieId,
+    dateReturn: null,
   });
 };
 
