@@ -14,7 +14,7 @@ const { Rental } = require("../models/rental");
 const MovieType = new GraphQLObjectType({
   name: "Movie",
   fields: () => ({
-    id: { type: GraphQLString },
+    _id: { type: GraphQLString },
     title: { type: GraphQLString },
     genre: { type: GenreType },
     numberInStock: { type: GraphQLInt },
@@ -34,7 +34,7 @@ const MovieType = new GraphQLObjectType({
 const GenreType = new GraphQLObjectType({
   name: "Genre",
   fields: () => ({
-    id: { type: GraphQLString },
+    _id: { type: GraphQLString },
     name: { type: GraphQLString },
     movies: {
       type: new GraphQLList(MovieType),
@@ -49,7 +49,7 @@ const GenreType = new GraphQLObjectType({
 const CustomerType = new GraphQLObjectType({
   name: "Customer",
   fields: () => ({
-    id: { type: GraphQLString },
+    _id: { type: GraphQLString },
     name: { type: GraphQLString },
     isGold: { type: GraphQLBoolean },
     phone: { type: GraphQLString },
@@ -66,7 +66,7 @@ const CustomerType = new GraphQLObjectType({
 const RentalType = new GraphQLObjectType({
   name: "Rental",
   fields: () => ({
-    id: { type: GraphQLString },
+    _id: { type: GraphQLString },
     customer: { type: CustomerType },
     movie: { type: MovieType },
     dateOut: { type: GraphQLString },
@@ -81,31 +81,31 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     movie: {
       type: MovieType,
-      args: { id: { type: GraphQLString } },
+      args: { _id: { type: GraphQLString } },
       async resolve(parent, args) {
         //code to get data from database
-        return await Movie.findById(args.id);
+        return await Movie.findById(args._id);
       },
     },
     genre: {
       type: GenreType,
-      args: { id: { type: GraphQLString } },
+      args: { _id: { type: GraphQLString } },
       async resolve(parent, args) {
-        return await Genre.findById(args.id);
+        return await Genre.findById(args._id);
       },
     },
     customer: {
       type: CustomerType,
-      args: { id: { type: GraphQLString } },
+      args: { _id: { type: GraphQLString } },
       async resolve(parent, args) {
-        return await Customer.findById(args.id);
+        return await Customer.findById(args._id);
       },
     },
     rental: {
       type: RentalType,
-      args: { id: { type: GraphQLString } },
+      args: { _id: { type: GraphQLString } },
       async resolve(parent, args) {
-        return await Rental.findById(args.id);
+        return await Rental.findById(args._id);
       },
     },
     movies: {

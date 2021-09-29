@@ -663,3 +663,43 @@
   message: 'Connected with database mongodb://localhost/store...',
   level: '\x1B[32minfo\x1B[39m'
 }
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
+{ message: 'Listening on port 3900...', level: '\x1B[32minfo\x1B[39m' }
+{
+  message: 'Connected with database mongodb://localhost/store...',
+  level: '\x1B[32minfo\x1B[39m'
+}
